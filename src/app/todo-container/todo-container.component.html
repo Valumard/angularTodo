@@ -1,0 +1,9 @@
+<div class="container">
+  <div *ngFor="let todo of todoService.undoneTodos$ | async">
+    <app-todo (onDone)="onDone($event)" [todo]="todo"></app-todo>
+  </div>
+  <br>
+  <div *ngFor="let todo of todoService.doneTodos$ | async">
+    <app-todo (onDone)="onDone($event)" [todo]="todo"></app-todo>
+  </div>
+</div>

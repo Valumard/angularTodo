@@ -1,0 +1,4 @@
+<div>
+  <input type="checkbox" [checked]="todo.done" (change)="checkTodo()">
+  <span [ngClass]="{'strike': todo.done}">{{todo.title}}</span>
+</div>
